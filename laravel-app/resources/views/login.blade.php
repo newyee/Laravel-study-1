@@ -8,10 +8,11 @@
 </head>
 <body>
     <div>
-        <a href="{{ route('login.index') }}">login</a>
-        <a href="{{ route('register.index') }}">register</a>
+        <a href="{{ route('login.create') }}">login</a>
+        <a href="{{ route('register.create') }}">register</a>
     </div>
-    <form action="" method="POST">
+    <form action="route('register.create') " method="POST">
+        @csrf
         <div>
             <label for="email">E-Mail Address</label>
             <input type="email" id="email">
